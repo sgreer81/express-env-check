@@ -1,13 +1,13 @@
 /**
  * Check if required environment variables are set on server startup
  * @param {string[]} requiredEnvVars Environment variables that are required
- * @param {string[]} maskedEnvVars Sensitive environment variables that should not have their values logged
+ * @param {string[]=} maskedEnvVars Sensitive environment variables that should not have their values logged
  * @param {function=} infoLog Function used for logging success messages
  * @param {function=} errorLog Function used for logging error messages
  */
 const checkEnvVars = (
   requiredEnvVars,
-  maskedEnvVars,
+  maskedEnvVars = [],
   infoLog = console.log,
   errorLog = console.error
 ) => {
